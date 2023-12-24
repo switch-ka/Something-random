@@ -1,0 +1,177 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background: url(bg.jpg) no-repeat center center fixed; /* Adjust 'bg.jpg' to the correct file path */
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    overflow: hidden;
+  }
+  
+  #flip-card {
+    background-color: transparent;
+    width: 600px;
+    height: 500px;
+    perspective: 1000px;
+    margin: 10%;
+  }
+  
+  #flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  }
+  
+  #flip-card-front,
+  #flip-card-back {
+    position: absolute;
+    width: 600px;
+    height: 500px;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  
+  #flip-card-front {
+    background-color: #8ec6ad;
+    color: black;
+  }
+  
+  #flip-card-back {
+    color: white;
+    transform: rotateY(180deg);
+    background-color: #6b9080;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    z-index: 0;
+  }
+  
+  #letter {
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    height: 80%;
+    background-color: #f0ead2;
+    background-position: right;
+    background-repeat: no-repeat;
+    border-radius: 1px;
+    padding: 10px;
+  }
+  
+  #envelope {
+    position: absolute;
+    height: 500px;
+    width: 600px;
+  
+    top: 0;
+    left: 0;
+    
+    border-top: 200px solid transparent;
+    border-right: 200px solid #84b8a1;
+    border-left: 200px solid #84b8a1;
+    border-bottom: 300px solid #8ec6ad;
+  
+    z-index: 3;
+  }
+  
+  .lid {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+  
+    border-right: 100px solid transparent;
+    border-bottom: 100px solid transparent;
+    border-left: 100px solid transparent;
+    transform-origin: top;
+  }
+  
+  #one {
+    border-top: 200px solid #6b9080;
+    transform: rotateX(0deg);
+    z-index: 3;
+  }
+  
+  #two {
+    border-top: 200px solid #ffffff;
+    transform: rotateX(90deg);
+    z-index: 1;
+  }
+  
+  #stamp {
+    position: absolute;
+    top: -60px;
+    right: -20px;
+    flex: 0;
+  }
+  
+  #stamp img {
+    float: right;
+    width: 128%;
+  }
+  
+  #Name {
+    position: absolute;
+    text-align: center;
+    top: 53.6%;
+    left: 15%;
+    color: #ffffff;
+    font-weight: 800;
+    font-size: 30px;
+  }
+  
+  #companyName {
+    position: absolute;
+    top: -23%;
+    text-align: center;
+    font-size: 35px;
+    color: white;
+    font-weight: 800;
+    left: 30%;
+    right: 30%;
+  }
+  
+  #message {
+    position: absolute;
+    top: 10%;
+    color: #a98467;
+    margin: 5px 5px;
+    font-size: 13px;
+    text-transform: uppercase;
+    font-family: sans-serif;
+    font-weight: 100;
+    letter-spacing: 2px;
+    text-align: center;
+  }
+  
+  #popUp {
+    height: 50px;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    background-color: #f0ead2;
+    z-index: 1;
+    display: none;
+  }
+  
+  #RSVP {
+    text-align: center;
+    color: #00cb65;
+    font-size: 12;
+    font-family: sans-serif;
+    padding: 15px;
+  }
